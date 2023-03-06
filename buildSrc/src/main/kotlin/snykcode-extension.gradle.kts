@@ -24,8 +24,10 @@ tasks.register<SnykCodeTask>("snyk-code"){
 }
 
 tasks.`snyk-monitor`{
-    snyk {
-        setArguments("--all-sub-projects")
+    doFirst{
+        snyk{
+            setArguments("--all-sub-projects")
+        }
     }
 }
 
